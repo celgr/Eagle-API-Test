@@ -22,7 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const filteredName = filtered[0].name
   const filteredExt = filtered[0].ext
 
-  let filepath = baseUrl + filteredId + '.info/' + filteredName + '.' + filteredExt
+  let filepath = `${baseUrl}${filteredId}.info/${filteredName}.${filteredExt}`
 
   const data = fs.readFileSync(filepath);
 
